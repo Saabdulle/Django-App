@@ -69,7 +69,8 @@ Django DRF App/
 
 ### Run Locally
  1. Clone the repository and navigate to the project's root directory.
- 2. Create and activate a virtual environment:
+ 2. Create .env and copy the .env.template into the .env.
+ 3. Create and activate a virtual environment:
  ```bash
     python -m venv venv
  ```
@@ -77,20 +78,20 @@ Django DRF App/
     Mac/Linux: source venv/bin/activate 
     Windows: venv\Scripts\activate
  ```
- 3. Install dependencies:
+ 4. Install dependencies:
  ```bash
     pip install -r requirements.txt
  ```
- 4. Apply migrations while in backend directory:
+ 5. Apply migrations while in backend directory:
   ``` bash
     python manage.py makemigrations
     python manage.py migrate
- ```
- 5. Run the following command: 
+  ```
+ 6. Run the following command: 
  ``` bash 
  python manage.py runserver
  ```
- 4. Access the API at `http://localhost:8000/` in your browser or through API clients like cURL.
+ 7. Access the API at `http://localhost:8000/` in your browser or through API clients like cURL.
 
  ### Run on Docker
 1. Ensure you have Docker installed.
