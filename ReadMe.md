@@ -1,1 +1,1 @@
-#Django App
+#Django Rest Framework App
