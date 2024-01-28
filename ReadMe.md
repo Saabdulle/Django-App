@@ -113,69 +113,69 @@ python manage.py test
 ## Endpoint Calls
 
 To create a contact request: 
- - Locally
-    ```bash
-    Locally: curl -X POST -H "Content-type: application/json" -d '{"name": "John Smith", "message": "Contact Message", "email":"johnsmith@email.com"}' 'http://localhost:8000/contact/'
-    ```
- - Docker CLI
-    ```bash 
-     http http://api:8000/contact/ name="John Smith" message="Contact Message" email="johnsmith@email.com"
-    ```
+```bash
+Locally: curl -X POST -H "Content-type: application/json" -d '{"name": "John Smith", "message": "Contact Message", "email":"johnsmith@email.com"}' 'http://localhost:8000/contact/'
+```
+```bash 
+ Docker CLI:
+http http://api:8000/contact/ name="John Smith" message="Contact Message" email="johnsmith@email.com"
+```
 To create a new token ID
-- This will be used to login to as Admin at ```http://localhost:8000/```admin. At this endpoint, you have admin control and can make new users, contacts, items, orders and more. 
-    - Locally 
-        ```bash
-        curl -XPOST -F 'username=**your_username**' -F 'password=**your_password**' http://localhost:8000/api-token-auth/
-        ```
-    - Docker CLI
-        ```bash 
-        http post http://api:8000/api-token-auth/ username=**your_username** password=**your_password**
-        ```
-Retrieve user's Auth Token
-    - locally:
-        ```bash
-        curl -X GET -H 'Authorization: Token **your_token**' http://localhost:8000/item/**your_item_uuid**/
-        ```
-    Docker CLI: 
-        ```bash
-        http http://api:8000/item/**your_item_uuid**/ 'Authorization: Token **your_token**' 
-        ```
-Retrieve all items in database
-    - Locally
-        ```bash
-        curl -X GET -H 'Authorization: Token **your_token**' http://localhost:8000/item/
-        ```
-    - Docker CLI
-        ```bash
-        http http://api:8000/item/ 'Authorization: Token **your_token**'
-        ```
+ This will be used to login to as Admin at ```http://localhost:8000/```admin. At this endpoint, you have admin control and can make new users, contacts, items, orders and more. 
+```bash
+Locally:
+curl -XPOST -F 'username=**your_username**' -F 'password=**your_password**' http://localhost:8000/api-token-auth/
+```
+```bash 
+Docker CLI:
+http post http://api:8000/api-token-auth/ username=**your_username** password=**your_password**
+```
+Retrieve user's Auth Token:
+
+```bash
+Locally:
+curl -X GET -H 'Authorization: Token **your_token**' http://localhost:8000/item/**your_item_uuid**/
+```
+```bash
+Docker CLI:
+http http://api:8000/item/**your_item_uuid**/ 'Authorization: Token **your_token**' 
+```
+Retrieve all items in database:
+```bash
+Locally:
+curl -X GET -H 'Authorization: Token **your_token**' http://localhost:8000/item/
+```
+```bash
+Docker CLI:
+http http://api:8000/item/ 'Authorization: Token **your_token**'
+```
 Retrieve a single item
-    - Locally
-        ```bash
-        curl -X GET -H 'Authorization: Token **your_token**' http://localhost:8000/item/**your_item_uuid**/
-        ```
-    - Docker CLI
-        ```bash
-        http http://api:8000/item/**your_item_uuid**/ 'Authorization: Token **your_token**' 
-        ```
+Locally
+```bash
+curl -X GET -H 'Authorization: Token **your_token**' http://localhost:8000/item/**your_item_uuid**/
+```
+```bash
+Docker CLI:
+http http://api:8000/item/**your_item_uuid**/ 'Authorization: Token **your_token**' 
+```
 Retrieve all orders
-    - Locally
-        ```bash
-        curl -X GET -H 'Authorization: Token **your_token**' http://localhost:8000/order/
-        ```
-    - Docker CLI
-        ```bash
-        http http://api:8000/order/ 'Authorization: Token **your_token**'
-        ```
+Locally
+```bash
+curl -X GET -H 'Authorization: Token **your_token**' http://localhost:8000/order/
+```
+```bash
+Docker CLI:
+http http://api:8000/order/ 'Authorization: Token **your_token**'
+```
 Place an order for specific item ID
-    - Locally 
-        ```bash
-        curl -X GET -H 'Authorization: Token **your_token**' http://localhost:8000/order/**your_order_uuid**/
-        ```
-    - Docker CLI
-        ```bash
-        http http://api:8000/order/**your_order_uuid**/ 'Authorization: Token **your_token**'
-        ```
+```bash
+Locally:
+curl -X GET -H 'Authorization: Token **your_token**' http://localhost:8000/order/**your_order_uuid**/
+```
+```bash
+Docker CLI:
+http http://api:8000/order/**your_order_uuid**/ 'Authorization: Token **your_token**'
+```
 ## Acknowledgements
 
 Special thanks to the course author at FreeCodeCamp for providing detailed instructions and hands-on exercises to enhance understanding and practical skills in Django Rest Framework.
